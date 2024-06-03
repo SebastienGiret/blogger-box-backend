@@ -9,6 +9,12 @@ public class Post {
     private int created_date;
     private UUID category_id;
 
+    public Post(String title, String content, UUID category_id) {
+        this.title = title;
+        this.content = content;
+        this.category_id = category_id;
+    }
+
     public UUID getId() {
         return id;
     }

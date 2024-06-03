@@ -1,7 +1,8 @@
-package com.dauphine.blogger.services;
+package com.dauphine.blogger.services.impl;
 
 
 import com.dauphine.blogger.models.Category;
+import com.dauphine.blogger.services.CategoryService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
