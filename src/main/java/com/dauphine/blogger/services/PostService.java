@@ -13,7 +13,7 @@ public interface PostService {
 
     Post getById(UUID id);
 
-    Post create(String title, String content, UUID category_id);
+    Post create(String title, String content, Category category);
 
     Post update(UUID id, String title, String content);
 

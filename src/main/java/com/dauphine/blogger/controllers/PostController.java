@@ -19,8 +19,8 @@ public class PostController {
     public PostController(PostService service) {this.service = service;}
 
     @PostMapping
-    public Post createPost(@RequestBody String title, String content, UUID category_id) {
-        return service.create(title,content,category_id);
+    public Post createPost(@RequestBody String title, String content, Category category) {
+        return service.create(title,content,category);
     }
     @GetMapping("{id}")
     public List<Post> getAllByCategoryId(@PathVariable UUID id) {
