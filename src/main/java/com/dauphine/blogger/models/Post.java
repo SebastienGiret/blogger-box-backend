@@ -26,7 +26,6 @@ public class Post {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public Post(String title, String content, UUID category) {}
     public Post(String title, String content, Category category) {
         this.id = UUID.randomUUID();
         this.title = title;

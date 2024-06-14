@@ -16,4 +16,6 @@ public interface PostRepository extends JpaRepository<Post, UUID> {
            WHERE (:contentOrTitle IS NULL OR p.title LIKE CONCAT('%', :contentOrTitle, '%') OR p.content LIKE CONCAT('%', :contentOrTitle, '%'))
     """)
     List<Post> findAllByTitleOrContent(@Param("contentOrTitle") String contentOrTitle);
+
+    List<Post> findAllByCategoryId(UUID category_id);
 }
