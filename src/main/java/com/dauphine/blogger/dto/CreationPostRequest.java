@@ -1,11 +1,21 @@
 package com.dauphine.blogger.dto;
 
+import com.dauphine.blogger.models.Category;
+
 import java.util.UUID;
 
 public class CreationPostRequest {
     private String title;
     private String content;
     private UUID category_id;
+
+    public CreationPostRequest() {}
+
+    public CreationPostRequest(String title, String content, UUID category_id) {
+        this.title = title;
+        this.content = content;
+        this.category_id = category_id;
+    }
 
     public String getTitle() {
         return title;

@@ -9,11 +9,13 @@ import java.util.UUID;
 public interface PostService {
     List<Post> getAllByCategoryId(UUID category_id);
 
+    List<Post> getAllByTitleOrContent(String contentOrTitle);
+
     List<Post> getAll();
 
     Post getById(UUID id);
 
-    Post create(String title, String content, Category category);
+    Post create(String title, String content, UUID category);
 
     Post update(UUID id, String title, String content);
 

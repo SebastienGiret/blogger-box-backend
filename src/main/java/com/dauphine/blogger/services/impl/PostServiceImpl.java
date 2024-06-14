@@ -35,12 +35,18 @@ public class PostServiceImpl implements PostService {
     public List<Post> getAll(){
         return repository.findAll();
     }
+
+    @Override
+    public List<Post> getAllByTitleOrContent(String contentOrTitle){
+        return repository.findAllByTitleOrContent(contentOrTitle);
+    }
+
     @Override
     public Post getById(UUID id){
         return repository.findById(id).orElse(null);
     }
     @Override
-    public Post create(String title, String content, Category category) {
+    public Post create(String title, String content, UUID category) {
         Post post = new Post(title, content, category);
         return repository.save(post);
     }
